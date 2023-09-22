@@ -12,10 +12,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+/**
+ * Controlador del Listado de Pilotos
+ */
 @Controller
 public class PilotosController {
 
+    /**
+     * Metodo que se encarga de mostrar la vista y pasarle la 
+     * lista de Pilotos ordenado por puntos
+     * @param model
+     * @return
+     */
     @GetMapping("/piloto")
     public String mostrarPilotos(Model model) {
         
@@ -36,27 +44,15 @@ public class PilotosController {
         return "pilotos";
     }
 
+    /**
+     * Metodo para eliminar un piloto y recargar la pagina con los datos nuevos con
+     * el parametro ue recibe
+     * @param id
+     */
     @PostMapping("/eliminarPiloto")
     public String eliminarPiloto(@RequestParam int id) {
         PilotoRepository.eliminarPilotos(id);
         return "redirect:/piloto";
     }
 
-    @PostMapping("/agregarPiloto")
-    public String agregarPiloto(@RequestParam String nombre,@RequestParam int puntos,@RequestParam int campeonatos ,@RequestParam String Escuderia) {
-
-        List<Piloto> pilotos = PilotoRepository.obtenerListaPilotos();
-
-        int maximoId = 0;
-        for (Piloto piloto : pilotos) {
-            int idPiloto = piloto.getId();
-            if (idPiloto > maximoId) {
-                maximoId = idPiloto;
-            }
-        }
-        Piloto nuevoPiloto = new Piloto(maximoId++, puntos, campeonatos, nombre, Escuderia);
-        pilotos.add(nuevoPiloto);
-
-        return "redirect:/pilotos";
-    }
 }

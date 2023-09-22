@@ -16,9 +16,17 @@ import com.viewnext.Kamikazes.models.Piloto;
 import com.viewnext.Kamikazes.repositories.EscuderiasRepository;
 import com.viewnext.Kamikazes.repositories.PilotoRepository;
 
+/**
+ * Controlador del listado de Escuderias
+ */
 @Controller
 public class EscuderiasController {
-    
+     /**
+     * Metodo que se encarga de mostrar la vista y pasarle la 
+     * lista de escuderias ordenada por puntos
+     * @param model
+     * @return
+     */
     @GetMapping("/escuderia")
     public String mostrarPilotos(Model model) {
         EscuderiasRepository escuderiaRepository = new EscuderiasRepository();

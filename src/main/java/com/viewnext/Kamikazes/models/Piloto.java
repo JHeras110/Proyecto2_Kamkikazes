@@ -1,20 +1,22 @@
 package com.viewnext.Kamikazes.models;
 
+/**
+ * Clase Pilotos 
+ */
 public class Piloto {
 
+    // Campos de la clase
     private int id;
-
     private int puntos;
-
     private int campeonatos;
-
     private String nombre;
-
     private String escuderia;
 
+    /**
+     * Creacion de Constructores de la Clase Piloto
+     */
     public Piloto() {
     }
-
     public Piloto(int puntos, int campeonatos, String nombre, String escuderia) {
         this.nombre = nombre;
         this.puntos = puntos;
@@ -22,7 +24,6 @@ public class Piloto {
 
         this.escuderia = escuderia;
     }
-
     public Piloto(int id, int puntos, int campeonatos, String nombre, String escuderia) {
         this.id = id;
         this.puntos = puntos;
@@ -77,7 +78,7 @@ public class Piloto {
     }
 
     /**
-     * Comprobamos que sea el unico
+     * Comprobamos que sea unico
      */
     @Override
     public int hashCode() {
@@ -101,6 +102,9 @@ public class Piloto {
         return true;
     }
 
+    /**
+     * Metodo para mostrar por pantalla
+     */
     @Override
     public String toString() {
         return "Piloto [puntos=" + puntos + ", campeonatos=" + campeonatos + ", nombre=" + nombre + ", escuderia="

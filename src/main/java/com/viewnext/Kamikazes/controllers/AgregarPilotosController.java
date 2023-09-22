@@ -13,17 +13,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.viewnext.Kamikazes.models.Piloto;
 import com.viewnext.Kamikazes.repositories.PilotoRepository;
 
+/**
+ * Controlador de la pagina Agregar Pilotos
+ */
 @Controller
 public class AgregarPilotosController {
 
+     /**
+     * Metodo que se encarga de mostrar la vista
+     * @param model
+     * @return
+     */
     @GetMapping("/agregarPiloto")
     public String mostrarPaginaAgregarPiloot(@ModelAttribute Piloto piloto) {
         return "agregarPilotos";
     }
 
+    /**
+     * Metodo que recibe 
+     * @param piloto
+     * y lo añade a la lista de Pilotos
+     * @return
+     */
     @PostMapping("/agregarPiloto/save")
     public String agregarPiloto(@ModelAttribute Piloto piloto) {
-        System.out.println("hola");
         List<Piloto> listaPilotos = PilotoRepository.obtenerListaPilotos();
 
         listaPilotos.add(piloto);

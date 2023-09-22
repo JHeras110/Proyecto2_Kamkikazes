@@ -5,10 +5,18 @@ import java.util.List;
 
 import com.viewnext.Kamikazes.models.Piloto;
 
+/**
+ *  Clase que crea, elimina o envia el listado de Pilotos Actualizado
+ */
 public class PilotoRepository {
 
+    // Campos de la Clas
 		private static List<Piloto> listaPilotos = crearPilotos();
 
+    /**
+     * Metodo que crea la Lista con los pilotos y los añade a una Lista estatica
+     * @return
+     */
     private static  List<Piloto> crearPilotos(){
         List<Piloto> pilotos = new ArrayList<>();
         
@@ -52,12 +60,19 @@ public class PilotoRepository {
         return pilotos;
     }
 
+    /**
+     * Metodo que devuelve la Lista de vehiculos
+     * @return
+     */
     public static List<Piloto> obtenerListaPilotos(){
 		    return listaPilotos;
     }
 
-
-
+    /**
+     * Metodo que recibe
+     * @param id
+     * y elimina el objeto que tenga ese parametro
+     */
     public static void eliminarPilotos(int id) {
       
       for (Piloto piloto : listaPilotos) {

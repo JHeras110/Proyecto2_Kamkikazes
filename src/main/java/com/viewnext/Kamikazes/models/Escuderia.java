@@ -1,10 +1,17 @@
 package com.viewnext.Kamikazes.models;
 
+/**
+ * Clase Escuderia
+ */
 public class Escuderia {
+    // Campos de la clase
     private String nombre;
     private int totalPuntos;
     private int totalCampeonatos;
 
+    /**
+     * Constructores
+     */
     public Escuderia() {
     }
     public Escuderia(String nombre) {
@@ -16,6 +23,10 @@ public class Escuderia {
         this.totalCampeonatos = totalCampeonatos;
     }
 
+    /**
+     * Getters & Setters
+     * @return
+     */
     public String getNombre() {
         return nombre;
     }
@@ -34,6 +45,10 @@ public class Escuderia {
     public void setTotalCampeonatos(int totalCampeonatos) {
         this.totalCampeonatos = totalCampeonatos;
     }
+
+    /**
+     * Metodo para imprimir por pantalla
+     */
     @Override
     public String toString() {
         return "Escuderia [nombre=" + nombre + ", totalPuntos=" + totalPuntos + ", totalCampeonatos=" + totalCampeonatos

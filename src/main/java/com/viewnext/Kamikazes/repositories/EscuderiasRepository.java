@@ -10,11 +10,23 @@ import com.viewnext.Kamikazes.models.Escuderia;
 import com.viewnext.Kamikazes.models.Piloto;
 
 
+/**
+ * Clase que genera un listado de Escuderias con una base prediseñada y
+ * los datos de los pilotos
+ */
 public class EscuderiasRepository {
 
-    
+    // Campos de la clase
     private List<Escuderia> listaEscuderias = new ArrayList<>();
 
+    /**
+     * Metodo que recibe
+     * @param listaPilotos
+     * y compara la lista de escuderias creadas en otro metodo, con la lista de 
+     * pilotos, y si coincide que infla las variables de puntos y campeonatos para
+     * devolvernos una lista de Escuderia con todos los datos
+     * @return
+     */
     public List<Escuderia> obtenerEscuderias(List<Piloto> listaPilotos){        
         System.out.println("hola");
         crearEscuderiasBase();
@@ -39,6 +51,9 @@ public class EscuderiasRepository {
 
     }
 
+    /**
+     * Metodo que crea las Bases del Listado de Escuderia
+     */
     private void crearEscuderiasBase(){
         Escuderia escuderia1 = new Escuderia("Ferrari");
         Escuderia escuderia2 = new Escuderia("Red Bull");
