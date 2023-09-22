@@ -10,8 +10,7 @@ Proyecto donde se muestra una clasificacion de Pilotos y Costructores.
 
 ## Tecnologias usadas
 
-thymeleaf, Tailwind CSS
-Java, SpringBoot, Maven
+thymeleaf - Tailwind CSS - Java - SpringBoot -  Maven
 
 ## Autor
 
