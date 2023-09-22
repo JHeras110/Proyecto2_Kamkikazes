@@ -11,3 +11,10 @@ Proyecto donde se muestra una clasificacion de Pilotos y Costructores.
 ## Autor
 
 * **Javier de las Heras** - *Trabajo Inicial* - [villanuevand](https://github.com/JHeras110)
+
+
+## Feedback
+
+Si tienes alguna sugerencia o alguna mejora no dude en hacernoslo saber, mandame un correo a Email@email.com
+
+
