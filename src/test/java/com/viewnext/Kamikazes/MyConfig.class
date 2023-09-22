@@ -1,0 +1,19 @@
+package main.test.java.com.viewnext.Kamikazes
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyConfig {
+    // Configuración personalizada aquí
+}
+
+@SpringBootTest(classes = MyConfig.class)
+public class MiPruebaDeIntegracion {
+
+    @Test
+    public void miPrueba() {
+        // Tu lógica de prueba aquí
+    }
+}

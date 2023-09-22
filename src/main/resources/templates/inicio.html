@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMIKAZES LEAGUE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://pbs.twimg.com/media/Enn6LTXXYAMB1fS?format=jpg&name=4096x4096'); /* Reemplaza con la URL o ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(36, 36, 36, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }        
+        .led-button {
+            background-color: transparent;
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .led-button-red {
+            border-color: red;
+            color: red;
+        }
+        .led-button-yellow {
+            border-color: yellow;
+            color: yellow;
+        }
+        .led-button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .title {
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black; /* Borde negro */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto">
+        <h1 class="title text-8xl font-bold mb-12">KAMIKAZES</h1>
+        <div class="flex justify-center">
+            <form action="/piloto" method="get">
+                <button type="submit"  name="piloto" value="piloto" class="led-button led-button-red">
+                    Pilotos
+                </button> 
+            </form>
+            <form action="/escuderia" method="get">
+                <button type="submit" name="escuderia" value="escuderia" class="led-button led-button-yellow">
+                    Escuderías
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

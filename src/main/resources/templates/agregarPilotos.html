@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMIKAZES LEAGUE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://pbs.twimg.com/media/Enn6LTXXYAMB1fS?format=jpg&name=4096x4096'); /* Reemplaza con la URL o ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(36, 36, 36, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }        
+        .led-button {
+            background-color:  rgba(128, 128, 128, 0.5);
+            color:white;
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            margin: 50px 10px 0px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;        }
+        .led-button-green {
+            border-color: green;
+        }
+        .led-button-blue {
+            border-color: blue;
+        }
+        .led-button-purple {
+            border-color: purple;
+        }
+        .led-button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .title {
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black; /* Borde negro */
+        }
+        tr:nth-child(odd){
+            background-color: rgba(80, 79, 79, 0.5);
+        }
+        tr td{
+            color:white;
+        }
+
+        label {
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form label{
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto">
+        <h1 class="title text-8xl font-bold mb-12">Añadir un Piloto</h1>
+        <form method="post" th:action="@{/agregarPiloto/save}" th:object="${piloto}">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" th:field="*{nombre}" required><br>
+        
+            <label for="puntos">Puntos:</label>
+            <input type="number" id="puntos" name="puntos" th:field="*{puntos}" required><br>
+        
+            <label for="campeonatos">Campeonatos:</label>
+            <input type="number" id="campeonatos" name="campeonatos" th:field="*{campeonatos}" required><br>
+        
+            <label for="escuderia">Escudería:</label>
+            <select id="escuderia" name="escuderia" th:field="*{escuderia}" required>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Red Bull">Red Bull</option>
+                <option value="Mclaren">Mclaren</option>
+                <option value="Alpine">Alpine</option>
+                <option value="Aston Martin">Aston Martin</option>
+                <option value="Williams">Williams</option>
+                <option value="Alfa Romeo">Alfa Romeo</option>
+                <option value="Haas">Haas</option>
+                <option value="Alpha Tauri">Alpha Tauri</option>
+            </select><br>
+        
+            <button type="submit" class="led-button led-button-blue">Agregar Piloto</button>
+        </form>
+    </div>
+</body>
+</html>
