@@ -2,7 +2,6 @@
 
 Proyecto donde se muestra una clasificacion de Pilotos y Costructores.
 
-
 ## Bases del Proyecto
 
 * [VSCode]((https://code.visualstudio.com/)) - El IDE usado para desarrollarlo
