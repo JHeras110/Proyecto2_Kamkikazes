@@ -1,4 +1,4 @@
-# Proyecto2_Kamkikazes
+# Kamkikazes
 
 Proyecto donde se muestra una clasificacion de Pilotos y Costructores.
 
